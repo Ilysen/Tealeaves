@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<objects>
+	<object Name="Ava_Tealeaves_Tealeaves" Inherits="SapientMutatedBush">
+		<part Name="Render" DisplayName="Tealeaves" RenderString="12" Tile="Creatures/Tealeaves.png" TileColor="&amp;w" DetailColor="g" />
+		<part Name="Brain" Factions="Consortium-100,Newly Sentient Beings-50" Mobile="false" />
+		<!--<part Name="ConversationScript" ConversationID="Ava_Tealeaves_TealeavesConversation" />-->
+		<builder Name="Tier3Wares" />
+		<mutation Name="PhotosyntheticSkin" Level="1" />
+		<inventoryobject Blueprint="Six Day Stilt Recoiler" />
+		<inventoryobject Blueprint="Clay Pot" />
+		<part Name="GivesRep" />
+		<tag Name="Gender" Value="neuter" />
+		<stat Name="Level" Value="15" />
+		<stat Name="Hitpoints" sValue="100" />
+		<skill Name="Discipline" />
+		<skill Name="Endurance_Weathered" />
+		<xtagGrammar Proper="true" />
+		<tag Name="NoHateFactions" Value="Mechanimists,Merchants,Wardens,Pariahs,Resheph" />
+		<tag Name="ExcludeFromDynamicEncounters" />
+		<xtagWaterRitual SellSkill="Discipline_Conatus" />
+	</object>
+	<object Name="Warden Esthers" Load="Merge">
+		<tag Name="NoHateFactions" Value="Mechanimists,Merchants,Pariahs,Resheph,Consortium" />
+	</object>
+	<object Name="Lulihart" Load="Merge">
+		<tag Name="NoHateFactions" Value="Wardens,Mechanimists,Resheph,Consortium" />
+	</object>
+	<object Name="Tszappur" Load="Merge">
+		<tag Name="NoHateFactions" Value="Mechanimists,Pariahs,Wardens,Consortium" />
+	</object>
+</objects>

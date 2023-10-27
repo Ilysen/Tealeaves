@@ -1,0 +1,115 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Map Width="80" Height="25" Load="Merge">
+  <cell X="18" Y="15">
+    <object Name="Concrete"></object>
+  </cell>
+  <cell X="19" Y="15">
+    <object Name="Concrete"></object>
+  </cell>
+  <cell X="20" Y="15">
+    <object Name="Concrete"></object>
+  </cell>
+  <cell X="21" Y="15">
+    <object Name="Concrete"></object>
+  </cell>
+  <cell X="22" Y="15">
+    <object Name="Concrete"></object>
+  </cell>
+  <cell X="23" Y="15">
+    <object Name="CanvasWall"></object>
+  </cell>
+  <cell X="24" Y="15">
+    <object Name="CanvasWall"></object>
+  </cell>
+  <cell X="16" Y="16">
+    <object Name="Concrete"></object>
+  </cell>
+  <cell X="17" Y="16">
+    <object Name="CanvasWall"></object>
+  </cell>
+  <cell X="18" Y="16">
+    <object Name="Concrete"></object>
+  </cell>
+  <cell X="19" Y="16">
+    <object Name="Concrete"></object>
+  </cell>
+  <cell X="20" Y="16">
+    <object Name="NoStiltSpawn"></object>
+    <object Name="Long Jug"></object>
+  </cell>
+  <cell X="21" Y="16">
+    <object Name="NoStiltSpawn"></object>
+    <object Name="Jug"></object>
+  </cell>
+  <cell X="22" Y="16">
+    <object Name="NoStiltSpawn"></object>
+  </cell>
+  <cell X="23" Y="16">
+    <object Name="NoStiltSpawn"></object>
+  </cell>
+  <cell X="24" Y="16">
+    <object Name="NoStiltSpawn"></object>
+  </cell>
+  <cell X="17" Y="17">
+    <object Name="NoStiltSpawn"></object>
+    <object Name="Table"></object>
+  </cell>
+  <cell X="18" Y="17">
+    <object Name="NoStiltSpawn"></object>
+  </cell>
+  <cell X="19" Y="17">
+    <object Name="NoStiltSpawn"></object>
+  </cell>
+  <cell X="20" Y="17">
+    <object Name="Floor Cushion"></object>
+    <object Name="NoStiltSpawn"></object>
+  </cell>
+  <cell X="21" Y="17">
+    <object Name="NoStiltSpawn"></object>
+  </cell>
+  <cell X="22" Y="17">
+    <object Name="NoStiltSpawn"></object>
+  </cell>
+  <cell X="23" Y="17">
+    <object Name="NoStiltSpawn"></object>
+  </cell>
+  <cell X="24" Y="17">
+    <object Name="NoStiltSpawn"></object>
+  </cell>
+  <cell X="17" Y="18">
+    <object Name="NoStiltSpawn"></object>
+    <object Name="Table"></object>
+  </cell>
+  <cell X="18" Y="18">
+    <object Name="Ava_Tealeaves_Tealeaves"></object>
+    <object Name="NoStiltSpawn"></object>
+  </cell>
+  <cell X="19" Y="18">
+    <object Name="NoStiltSpawn"></object>
+  </cell>
+  <cell X="20" Y="18">
+    <object Name="NoStiltSpawn"></object>
+  </cell>
+  <cell X="21" Y="18">
+    <object Name="NoStiltSpawn"></object>
+  </cell>
+  <cell X="22" Y="18">
+    <object Name="NoStiltSpawn"></object>
+    <object Name="Hookah"></object>
+  </cell>
+  <cell X="23" Y="18">
+    <object Name="NoStiltSpawn"></object>
+  </cell>
+  <cell X="24" Y="18">
+    <object Name="NoStiltSpawn"></object>
+  </cell>
+  <cell X="17" Y="19">
+    <object Name="Techlight1"></object>
+  </cell>
+  <cell X="21" Y="19">
+    <object Name="Floor Cushion"></object>
+  </cell>
+  <cell X="23" Y="19">
+    <object Name="Floor Cushion"></object>
+  </cell>
+</Map>
