@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<conversations>
+	<conversation ID="Ava_Tealeaves_TealeavesConversation">
+		<start ID="Greeting">
+			<text>
+				Hello friend?~
+				Would you like to trade with me?~
+				Live and drink.~
+				Would you like to share water?~
+				Would you like to learn about the jungle?~
+      	I am a friend.
+			</text>
+			<part Name="TextInsert" Spoken="true" Prepend="true" NewLines="2" Text="{{emote|*Tealeaves sits in silence for several moments, then speaks slowly.*}}" />
+			<choice ID="Asphodel" Target="Asphodel" IfHaveActiveQuest="The Earl of Omonporch">What do you know about the Earl of Omonporch?</choice>
+			<choice ID="Story" GotoID="Story">Who are you?</choice>
+			<choice ID="Manners" GotoID="Manners">Why do you speak so slowly?</choice>
+			<choice ID="Consortium" GotoID="Consortium">Are you from the Consortium?</choice>
+			<choice GotoID="NoTent">Why aren't you in a tent?</choice>
+			<choice ID="Exit" GotoID="End">Live and drink.</choice>
+		</start>
+		<node ID="OtherQuestions" Inherits="Greeting">
+			<text>It is okay.</text>
+		</node>
+
+		<node ID="Story" Inherits="Greeting">
+			<text>I think I am Tealeaves.</text>
+			<choice GotoID="Story_NotChosen" Priority="1">You aren't sure?</choice>
+		</node>
+		<node ID="Story_NotChosen">
+			<text>I did not choose my name. I am called Tealeaves because I have tea leaves.</text>
+			<part Inherits="Ava_Tealeaves_TealeavesConversation.Greeting.TextInsert" />
+			<choice GotoID="Story_CallYou">What would you like me to call you?</choice>
+			<choice UseID="OtherQuestions" />
+			<choice UseID="Exit" />
+		</node>
+		<node ID="Story_CallYou">
+			<text>You may call me Tealeaves.</text>
+			<part Inherits="Ava_Tealeaves_TealeavesConversation.Greeting.TextInsert" />
+			<choice ID="OtherQuestions" GotoID="OtherQuestions">There was more I wanted to ask.</choice>
+			<choice GotoID="End">Very well. Live and drink, Tealeaves.</choice>
+		</node>
+
+		<node ID="Manners" Inherits="Greeting">
+			<text>I am still learning.</text>
+		</node>
+
+		<node ID="Consortium">
+			<text>I think so? I am spawn-sirred by them.</text>
+			<part Inherits="Ava_Tealeaves_TealeavesConversation.Greeting.TextInsert" />
+			<choice GotoID="Consortium_Goods">What do you sell?</choice>
+			<choice GotoID="Consortium_SpawnSirred" SetBooleanState="Ava_Tealeaves_AskedAboutSponsorship,true">Spawn-sirred?</choice>
+			<choice UseID="Exit" />
+		</node>
+		<node ID="Consortium_Goods" Inherits="Consortium">
+			<text>Many things. Would you like to look? I can only give you one recoiler, though.</text>
+			<choice ID="Consortium_Trade" Priority="2">
+				<text>Yes, please.</text>
+				<part Name="Trade" />
+			</choice>
+			<choice GotoID="Consortium_Recoiler" Priority="1">That's odd. Why?</choice>
+		</node>
+		<node ID="Consortium_SpawnSirred" Inherits="Consortium">
+			<text>Yes. They give me things to trade and help me learn. I give them water to do it.</text>
+		</node>
+		<node ID="Consortium_Recoiler">
+			<text>People keep throwing them in the well.</text>
+			<part Inherits="Ava_Tealeaves_TealeavesConversation.Greeting.TextInsert" />
+			<choice UseID="OtherQuestions" />
+			<choice GotoID="End">Ah. Fair enough.</choice>
+		</node>
+
+		<node ID="NoTent" Inherits="Greeting">
+			<text>I don't want one.</text>
+		</node>
+
+		<node ID="Asphodel">
+			<text>I have heard of Asphodel but I have not met Asphodel. What are they like?</text>
+			<part Inherits="Ava_Tealeaves_TealeavesConversation.Greeting.TextInsert" />
+			<choice GotoID="Asphodel_HopingYouKnew">I was hoping to ask you that question.</choice>
+			<choice GotoID="Asphodel_Lease">How can I convince Asphodel to lease the Spindle to Barathrum?</choice>
+		</node>
+		<node ID="Asphodel_HopingYouKnew" Inherits="Asphodel">
+			<text>Ah.</text>
+		</node>
+		<node ID="Asphodel_Lease">
+			<text>I do not know. I am sorry.</text>
+			<part Inherits="Ava_Tealeaves_TealeavesConversation.Greeting.TextInsert" />
+			<choice GotoID="End">You are forgiven, Tealeaves. Live and drink.</choice>
+		</node>
+	</conversation>
+</conversations>
