@@ -1,27 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
 <conversations>
+	<!--
+		This script adds a new dialogue option to Wardens Esther in the Stilt that adds a bit of extra dialogue referencing Tealeaves and who they are.
+	-->
 	<conversation ID="WardenEsthers" Load="Merge">
 		<start ID="Welcome" Load="Merge">
 			<choice GotoID="Ava_Tealeaves_Tealeaves" IfNotTestState="Ava_Tealeaves_TealeavesDied">
-				<text>What can you tell me about the plant near the southwest tent?</text>
+				<text>What can you tell me about the plant near Tszappur's tent?</text>
 			</choice>
 		</start>
 		<node ID="Ava_Tealeaves_Tealeaves" Inherits="Welcome">
-			<text>Oh, that's Tealeaves. They've only begun thinking recently and they're still discovering themselves, but they've a mind to remain here for the time as a chandler. If you need a recoiler, they would be the one to ask.</text>
+			<text>Oh, that's Tealeaves. They've only arrived recently and they're still discovering themselves, but they're of a mind to remain here for the time being as a chandler. If you need a recoiler, they would be the one to ask.</text>
 			<choice GotoID="Ava_Tealeaves_Sponsor" IfTestState="Ava_Tealeaves_AskedAboutSponsorship">They mentioned that the Consortium is "spawn-sirring" them?</choice>
 		</node>
 		<node ID="Ava_Tealeaves_Sponsor">
 			<text>{{emote|*The wardens laugh.*}}
 			
 			They mean to say that they're being sponsored. They've an agreement with the Consortium; they are provided with goods to sell, and in exchange they pay a tithe of their water.</text>
-			<choice GotoID="Ava_Tealeaves_Used">That's worrying. Wouldn't they lack the experience to know if they were being used?</choice>
+			<choice GotoID="Ava_Tealeaves_Worrying">That's worrying.</choice>
 			<choice GotoID="Welcome">I had other questions.</choice>
 			<choice GotoID="End">Live and drink.</choice>
 		</node>
-		<node ID="Ava_Tealeaves_Used" Inherits="Ava_Tealeaves_Sponsor">
+		<node ID="Ava_Tealeaves_Worrying" Inherits="Ava_Tealeaves_Sponsor">
 			<text>I thought so too. Given the nature of the request, I made sure that I was present during the negotiations, and the church retains full authority to make changes to the sponsorship's terms as needed. The Consortium lacks a permanent fixture within the Stiltgrounds, and so thus far they have been willing to acquiesce if it means having a representative within the bazaar.
 			
-			Fear not; we're of a mind to ensure that they retain their independence and have space to grow away from the Consortium.</text>
+			Don't worry. We intend to ensure that they retain their independence and have space to grow without the Consortium making them into a tool to be used. I hope that helps to soothe your fears.</text>
 		</node>
 	</conversation>
 </conversations>
