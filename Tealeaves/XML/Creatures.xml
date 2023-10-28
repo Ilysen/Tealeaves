@@ -5,7 +5,7 @@
 
 		This object def is extensively documented, with pretty much every part and tag having a lengthy comment.
 		A lot of comments refer to the base game's data files; at the time of writing, the wiki has a helpful guide for finding these: https://wiki.cavesofqud.com/wiki/File_locations
-		This link might be dead in the future, in which case you can check community spaces or dig around in the game files. Once you start finding .xml and .rpm files, you'll be in the right place.
+		This link might be dead in the future, in which case you can check community spaces or dig around in the game's install folder; look for StreamingAssets/Base. Once you start finding .xml and .rpm files, you know you're in the right place.
 	 -->
 	<object Name="Ava_Tealeaves_Tealeaves" Inherits="SapientMutatedBush">
 		<!-- The Render part determines how Tealeaves looks in both ascii and with tiles. In ascii, they appear as a green T; in tiles, they use the custom sprite found in Textures/Creatures/Tealeaves.png with a green tile color and a yellow detail color. -->
@@ -36,12 +36,12 @@
 
 		<!-- 
 			In order, these next three properties:
-				1. Make Tealeaves into a merchant that sells tier 3 wares and restocks like regular merchants, consuming items that they buy in the process;
+				1. Make Tealeaves into a merchant that sells tier 1 wares and restocks like regular merchants, consuming items that they buy in the process;
 				2. Add a single clay pot to Tealeaves's inventory, which they will equip automatically;
 				3. Add a single Stilt recoiler to Tealeaves's inventory, which the player can buy.
 			Tealeaves only stocks one recoiler here because it would require a custom builder to add the recoiler to their restocking inventory, and builders are defined in C#. To respect the "no scripting" limitation of the mod jam, we have them only sell a single one instead, and give a witty narrative reason in the conversation script. 
 		-->
-		<builder Name="Tier3Wares" />
+		<builder Name="Tier1Wares" />
 		<inventoryobject Blueprint="Clay Pot" />
 		<inventoryobject Blueprint="Six Day Stilt Recoiler" />
 

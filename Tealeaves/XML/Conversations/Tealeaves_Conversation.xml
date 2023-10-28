@@ -22,7 +22,7 @@
 			<choice Target="Manners">Why do you speak so slowly?</choice>
 			<choice Target="Consortium">Are you from the Consortium?</choice>
 			<choice Target="NoTent">Why aren't you in a tent?</choice>
-			<choice Target="Stilt" IfTestState="Ava_Tealeaves_CanAskAboutStilt" IfNotTestState="Ava_Tealeaves_TalkedAboutStilt">Why is it that you stay here, in the Stilt? It must be terribly hot and dry, is it not?</choice>
+			<choice Target="Stilt" IfTestState="Ava_Tealeaves_CanAskAboutStilt" IfNotTestState="Ava_Tealeaves_TalkedAboutStilt">Why is it that you stay here, in the Stilt? Is it not terribly hot and dry?</choice>
 			<choice ID="Exit" Target="End">Live and drink.</choice>
 		</start>
 		<node ID="OtherQuestions" Inherits="Greeting">
