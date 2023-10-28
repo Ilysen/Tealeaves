@@ -19,9 +19,11 @@
 			
 			Unless otherwise specified, default creatures have a neutral demeanor and don't wander; in our case, Tealeaves is loved by newly sentient beings, which are its primary faction (though we could add secondary factions if we wanted by delimiting them with a comma, i.e. "Newly Sentient Beings-100,Snapjaws-50" would make them liked by snapjaws as well).
 			
+			Default creatures will wander around to different points on the screen. Like the other sapient plant NPCs in Qud, we need to manually prevent them from wandering or they'll walk off at random and not return back; we want Tealeaves staying in a consistent spot, day and night.
+
 			The Calm attribute makes Tealeaves docile instead of neutral, which prevents them from attacking characters on sight even if they're disliked by newly sentient beings - they would need to be hated for Tealeaves to attack them. (The counterpart to this is the Hostile attribute, which would set their demeanor to aggressive and thus cause them to attack everything without a positive newly sentient beings reputation on sight!)
 		-->
-		<part Name="Brain" Factions="Newly Sentient Beings-100" Calm="True" />
+		<part Name="Brain" Factions="Newly Sentient Beings-100" Wanders="False" Calm="True" />
 
 		<!-- This part just points to the conversation script Tealeaves uses, which you can find in Conversations/Tealeaves_Conversation.xml. -->
 		<part Name="ConversationScript" ConversationID="Ava_Tealeaves_TealeavesConversation" />
@@ -45,7 +47,7 @@
 
 		<!-- These stat names and values should be self-explanatory. -->
 		<stat Name="Level" Value="15" />
-		<stat Name="Hitpoints" sValue="100" />
+		<stat Name="Hitpoints" Value="100" />
 
 		<!-- Mutations and skills use string IDs, both of which are defined with the name of their Class attribute in their xml defs (which are found in Mutations.xml and Skills.xml). -->
 		<mutation Name="Telepathy" Level="1" />

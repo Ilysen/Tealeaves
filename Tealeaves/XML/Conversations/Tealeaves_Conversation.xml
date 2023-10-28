@@ -22,6 +22,7 @@
 			<choice Target="Manners">Why do you speak so slowly?</choice>
 			<choice Target="Consortium">Are you from the Consortium?</choice>
 			<choice Target="NoTent">Why aren't you in a tent?</choice>
+			<choice Target="Stilt" IfTestState="Ava_Tealeaves_CanAskAboutStilt" IfNotTestState="Ava_Tealeaves_TalkedAboutStilt">Why is it that you stay here, in the Stilt? It must be terribly hot and dry, is it not?</choice>
 			<choice ID="Exit" Target="End">Live and drink.</choice>
 		</start>
 		<node ID="OtherQuestions" Inherits="Greeting">
@@ -66,7 +67,7 @@
 			<choice Target="Consortium_Recoiler" Priority="1">That's odd. Why?</choice>
 		</node>
 		<node ID="Consortium_SpawnSirred" Inherits="Consortium">
-			<text>Yes. They give me things to trade and help me learn. I give them water to do it.</text>
+			<text>Yes. They give me things to trade and help me learn, and I give them water.</text>
 		</node>
 		<node ID="Consortium_Recoiler">
 			<text>People keep throwing them in the well.</text>
@@ -77,6 +78,75 @@
 
 		<node ID="NoTent" Inherits="Greeting">
 			<text>I don't want one.</text>
+		</node>
+
+		<node ID="Stilt">
+			<text>
+				{{emote|*Tealeaves sits in silence for many moments.*}}
+
+				I have thought this too. I do not want to take your time talking. You are busy?
+			</text>
+			<choice Target="Stilt_1">I'm not busy. I'd like to hear it, if you're willing.</choice>
+			<choice Target="OtherQuestions">Perhaps another time, then.</choice>
+		</node>
+		<node ID="Stilt_1">
+			<text>
+				I am thinking.
+			</text>
+			<part Inherits="Ava_Tealeaves_TealeavesConversation.Greeting.TextInsert" />
+			<choice Target="Stilt_2">...</choice>
+		</node>
+		<node ID="Stilt_2">
+			<text>
+				I do remember the jungle. Richer soil, loam and water for roots. Warm home.
+			</text>
+			<part Inherits="Ava_Tealeaves_TealeavesConversation.Greeting.TextInsert" />
+			<choice Target="Stilt_3">Why did you leave?</choice>
+		</node>
+		<node ID="Stilt_3">
+			<text>
+				No room? Mm. No place to learn, nothing to speak. Too loud for thinking.
+
+				Sorry. Understand words?
+			</text>
+			<part Inherits="Ava_Tealeaves_TealeavesConversation.Greeting.TextInsert" />
+			<choice Target="Stilt_4">Yes. Continue.</choice>
+			<choice Target="End">I'm afraid not. Perhaps later.</choice>
+		</node>
+		<node ID="Stilt_4">
+			<text>
+				Cannot learn alone. Need words? Need talking. Other people, new things.
+
+				Do I exist if nobody knows I exist? What is mind? What is me?
+
+				Am I real?
+			</text>
+			<part Inherits="Ava_Tealeaves_TealeavesConversation.Greeting.TextInsert" />
+			<choice Target="Stilt_5">Of course you are.</choice>
+			<choice Target="Stilt_5">I do not know if I can answer that.</choice>
+			<choice Target="Stilt_5">No.</choice>
+			<choice Target="Stilt_5">...</choice>
+		</node>
+		<node ID="Stilt_5">
+			<text>
+				Perhaps.
+
+				I would like to learn. So I moved here, to learn. Now I am learning by watching and listening.
+			</text>
+			<part Inherits="Ava_Tealeaves_TealeavesConversation.Greeting.TextInsert" />
+			<choice Target="Stilt_6">...</choice>
+		</node>
+		<node ID="Stilt_6">
+			<text>
+				I will not stay for many years. I want to see other new places too. But I am learning about me and everyone. I am okay with the salt and heat. I have enough water, and I am spawn-sirred.
+
+				For now I am Tealeaves. Maybe I will be someone else soon.
+			</text>
+			<part Inherits="Ava_Tealeaves_TealeavesConversation.Greeting.TextInsert" />
+			<choice Target="Stilt_End" SetBooleanState="Ava_Tealeaves_TalkedAboutStilt,true">Thank you for telling me, Tealeaves.</choice>
+		</node>
+		<node ID="Stilt_End" Inherits="Greeting">
+			<text>You're welcome.</text>
 		</node>
 
 		<node ID="Asphodel">
