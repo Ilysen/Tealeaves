@@ -41,7 +41,7 @@
 				3. Add a single Stilt recoiler to Tealeaves's inventory, which the player can buy.
 			Tealeaves only stocks one recoiler here because it would require a custom builder to add the recoiler to their restocking inventory, and builders are defined in C#. To respect the "no scripting" limitation of the mod jam, we have them only sell a single one instead, and give a witty narrative reason in the conversation script. 
 		-->
-		<part Name="GenericInventoryRestocker" Table="Tier1Wares" />    
+		<part Name="GenericInventoryRestocker" Table="Tier1Wares" />
 		<inventoryobject Blueprint="Clay Pot" />
 		<inventoryobject Blueprint="Six Day Stilt Recoiler" />
 
