@@ -8,3 +8,11 @@ Tealeaves is licensed under the [Creative Commons Zero](https://creativecommons.
 
 * **Ilysen** - XML, dialogue, mapping
 * **Lamb** - Sprites
+
+## Changelog
+
+### 10 June, 2024
+* Updated to work with the Spring Molting patch (2.0.207.63).
+
+### 28 October, 2023
+* Initial release.
